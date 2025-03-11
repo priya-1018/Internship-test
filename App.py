@@ -3,12 +3,12 @@ import os
 import datetime
 import subprocess
 
-app = Flask(_name_)
+app = Flask(__name__)
 
 @app.route('/htop')
 def htop():
     # Name
-    name = "Shashank [Replace with your full name]"
+    name = "Priya"
     
     # System Username
     username = os.getenv('USER') or os.getenv('USERNAME')
@@ -38,5 +38,5 @@ def htop():
     </html>
     """
 
-if _name_ == '_main_':
+if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
